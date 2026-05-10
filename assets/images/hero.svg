@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" width="420" height="520">
+  <!-- Background -->
+  <rect width="420" height="520" fill="#f7ede6"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="80" cy="100" r="40" fill="#b8896a" opacity="0.15"/>
+  <circle cx="340" cy="150" r="60" fill="#b8896a" opacity="0.1"/>
+  <circle cx="100" cy="450" r="50" fill="#b8896a" opacity="0.12"/>
+  
+  <!-- Hair illustration -->
+  <ellipse cx="210" cy="120" rx="45" ry="50" fill="#8b5a42"/>
+  <path d="M 165 140 Q 160 180 170 220" stroke="#8b5a42" stroke-width="8" fill="none"/>
+  <path d="M 255 140 Q 260 180 250 220" stroke="#8b5a42" stroke-width="8" fill="none"/>
+  <path d="M 190 140 Q 185 175 195 210" stroke="#a07359" stroke-width="6" fill="none"/>
+  <path d="M 230 140 Q 235 175 225 210" stroke="#a07359" stroke-width="6" fill="none"/>
+  
+  <!-- Face -->
+  <ellipse cx="210" cy="200" rx="30" ry="35" fill="#ddb892"/>
+  
+  <!-- Eyes -->
+  <circle cx="200" cy="190" r="4" fill="#2a1a14"/>
+  <circle cx="220" cy="190" r="4" fill="#2a1a14"/>
+  
+  <!-- Smile -->
+  <path d="M 200 210 Q 210 220 220 210" stroke="#2a1a14" stroke-width="2" fill="none"/>
+  
+  <!-- Brush icon -->
+  <g transform="translate(280, 320)">
+    <rect x="0" y="0" width="12" height="40" fill="#8b5a42" rx="2"/>
+    <circle cx="6" cy="-8" r="10" fill="#b8896a"/>
+    <circle cx="4" cy="-8" r="2" fill="#2a1a14"/>
+    <circle cx="8" cy="-8" r="2" fill="#2a1a14"/>
+  </g>
+  
+  <!-- Scissors icon -->
+  <g transform="translate(100, 320)">
+    <circle cx="-5" cy="0" r="6" fill="none" stroke="#b8896a" stroke-width="2"/>
+    <circle cx="5" cy="0" r="6" fill="none" stroke="#b8896a" stroke-width="2"/>
+    <line x1="-5" y1="0" x2="5" y2="0" stroke="#b8896a" stroke-width="2"/>
+    <path d="M -5 -8 L 5 8" stroke="#b8896a" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- Decorative line -->
+  <line x1="50" y1="450" x2="370" y2="450" stroke="#b8896a" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Text placeholder -->
+  <text x="210" y="500" font-family="'Playfair Display', serif" font-size="16" fill="#6b4a3e" text-anchor="middle" opacity="0.5">
+    Carregue sua imagem
+  </text>
+</svg>
