@@ -6,12 +6,15 @@
   <meta name="description" content="Estética Lu — Cabeleireiro, Manicure, Pedicure, Depilação e Maquiagem. Av. Venâncio Aires, 490. Agende: (51) 8148.7093">
   <title>Estética Lu | Salão de Beleza</title>
 
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
+  <!-- Estilos personalizados (carregados após Bootstrap para sobrescrever quando necessário) -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
@@ -19,124 +22,127 @@
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════
+  <!-- ══════════════════════════════════════
        HEADER
-  ════════════════════════════════════════ -->
+  ══════════════════════════════════════ -->
   <header class="header" id="header">
     <div class="container">
-      <a href="#" class="logo" aria-label="Estética Lu">
-        <span class="logo__mark" aria-hidden="true">Lu</span>
-        <div class="logo__text">
-          <span class="logo__name">Estética Lu</span>
-          <span class="logo__subtitle">Salão de Beleza</span>
-        </div>
-      </a>
+      <div class="d-flex align-items-center gap-3">
 
-      <nav class="nav" id="nav" aria-label="Menu principal">
-        <a href="#services"      class="nav__link">Serviços</a>
-        <a href="#how-it-works"  class="nav__link">Como funciona</a>
-        <a href="#gallery"       class="nav__link">Galeria</a>
-        <a href="#testimonials"  class="nav__link">Depoimentos</a>
-        <a href="#faq"           class="nav__link">FAQ</a>
-      </nav>
+        <a href="#" class="logo me-auto" aria-label="Estética Lu">
+          <span class="logo__mark" aria-hidden="true">Lu</span>
+          <div class="logo__text">
+            <span class="logo__name">Estética Lu</span>
+            <span class="logo__subtitle">Salão de Beleza</span>
+          </div>
+        </a>
 
-      <a href="https://wa.me/5551814870093?text=Ol%C3%A1%2C%20quero%20agendar%20um%20hor%C3%A1rio!"
-         class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">
-        Agendar Horário
-      </a>
+        <nav class="nav" id="nav" aria-label="Menu principal">
+          <a href="#services"      class="nav__link">Serviços</a>
+          <a href="#how-it-works"  class="nav__link">Como funciona</a>
+          <a href="#gallery"       class="nav__link">Galeria</a>
+          <a href="#testimonials"  class="nav__link">Depoimentos</a>
+          <a href="#faq"           class="nav__link">FAQ</a>
+        </nav>
 
-      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+        <a href="https://wa.me/5551814870093?text=Ol%C3%A1%2C%20quero%20agendar%20um%20hor%C3%A1rio!"
+           class="btn btn--primary btn--sm header-cta" target="_blank" rel="noopener noreferrer">
+          Agendar Horário
+        </a>
+
+        <button type="button" class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
     </div>
   </header>
 
 
-  <!-- ═══════════════════════════════════════
+  <!-- ══════════════════════════════════════
        HERO
-  ════════════════════════════════════════ -->
+  ══════════════════════════════════════ -->
   <section class="hero" id="hero">
     <div class="container">
+      <div class="row align-items-center gy-5">
 
-      <!-- Texto -->
-      <div class="hero__content">
-        <p class="hero__eyebrow" data-reveal>Bem-vinda à Estética Lu</p>
+        <!-- Conteúdo -->
+        <div class="col-lg-6 order-2 order-lg-1">
+          <p class="hero__eyebrow" data-reveal>Bem-vinda à Estética Lu</p>
 
-        <h1 class="hero__title" data-reveal data-reveal-delay="1">
-          Sua beleza,<br>
-          <em>nossa arte.</em>
-        </h1>
+          <h1 class="hero__title" data-reveal data-reveal-delay="1">
+            Sua beleza,<br><em>nossa arte.</em>
+          </h1>
 
-        <p class="hero__description" data-reveal data-reveal-delay="2">
-          Cabelo, estética e maquiagem em um único lugar — com a atenção que você merece.
-          Porque cuidar de você é o nosso maior prazer.
-        </p>
+          <p class="hero__description" data-reveal data-reveal-delay="2">
+            Cabelo, estética e maquiagem em um único lugar — com a atenção que você merece.
+            Porque cuidar de você é o nosso maior prazer.
+          </p>
 
-        <div class="hero__actions" data-reveal data-reveal-delay="3">
-          <a href="https://wa.me/5551814870093?text=Ol%C3%A1%2C%20quero%20agendar%20um%20hor%C3%A1rio!"
-             class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">
-            Agendar pelo WhatsApp
-          </a>
-          <a href="#services" class="btn btn--outline btn--lg">Ver serviços</a>
+          <div class="hero__actions d-flex flex-wrap gap-3" data-reveal data-reveal-delay="3">
+            <a href="https://wa.me/5551814870093?text=Ol%C3%A1%2C%20quero%20agendar%20um%20hor%C3%A1rio!"
+               class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">
+              Agendar pelo WhatsApp
+            </a>
+            <a href="#services" class="btn btn--outline btn--lg">Ver serviços</a>
+          </div>
+
+          <div class="hero__stats d-flex align-items-center gap-4 flex-wrap" data-reveal data-reveal-delay="4">
+            <div class="stat">
+              <div class="stat__value d-flex align-items-baseline gap-1">
+                <span class="stat__number" data-count="800">0</span>
+                <span class="stat__suffix">+</span>
+              </div>
+              <p class="stat__label">Clientes atendidas</p>
+            </div>
+            <div class="stat__divider d-none d-sm-block" aria-hidden="true"></div>
+            <div class="stat">
+              <div class="stat__value d-flex align-items-baseline gap-1">
+                <span class="stat__number" data-count="8">0</span>
+                <span class="stat__suffix"> anos</span>
+              </div>
+              <p class="stat__label">de experiência</p>
+            </div>
+            <div class="stat__divider d-none d-sm-block" aria-hidden="true"></div>
+            <div class="stat">
+              <div class="stat__value d-flex align-items-baseline gap-1">
+                <span class="stat__number" data-count="99">0</span>
+                <span class="stat__suffix">%</span>
+              </div>
+              <p class="stat__label">de satisfação</p>
+            </div>
+          </div>
         </div>
 
-        <div class="hero__stats" data-reveal data-reveal-delay="4">
-          <div class="stat">
-            <div class="stat__value">
-              <span class="stat__number" data-count="800">0</span>
-              <span class="stat__suffix">+</span>
+        <!-- Visual -->
+        <div class="col-lg-5 offset-lg-1 col-md-8 mx-md-auto order-1 order-lg-2" data-reveal data-reveal-delay="2">
+          <div class="hero__visual">
+            <div class="hero__photo" role="img" aria-label="Foto do salão Estética Lu"></div>
+            <div class="hero__badge">
+              <div class="hero__badge-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+              </div>
+              <div class="hero__badge-text">
+                <strong>Atendimento Personalizado</strong>
+                <span>Para cada cliente, um cuidado único</span>
+              </div>
             </div>
-            <p class="stat__label">Clientes atendidas</p>
-          </div>
-          <div class="stat__divider" aria-hidden="true"></div>
-          <div class="stat">
-            <div class="stat__value">
-              <span class="stat__number" data-count="8">0</span>
-              <span class="stat__suffix"> anos</span>
-            </div>
-            <p class="stat__label">de experiência</p>
-          </div>
-          <div class="stat__divider" aria-hidden="true"></div>
-          <div class="stat">
-            <div class="stat__value">
-              <span class="stat__number" data-count="99">0</span>
-              <span class="stat__suffix">%</span>
-            </div>
-            <p class="stat__label">de satisfação</p>
           </div>
         </div>
+
       </div>
-
-      <!-- Imagem -->
-      <div class="hero__visual" data-reveal data-reveal-delay="2">
-        <div class="hero__photo" role="img" aria-label="Foto do salão Bella Studio"></div>
-
-        <div class="hero__badge">
-          <div class="hero__badge-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-            </svg>
-          </div>
-          <div class="hero__badge-text">
-            <strong>Atendimento Personalizado</strong>
-            <span>Para cada cliente, um cuidado único</span>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
 
-  <!-- ═══════════════════════════════════════
-       MARQUEE — serviços em destaque
-  ════════════════════════════════════════ -->
+  <!-- ══════════════════════════════════════
+       MARQUEE
+  ══════════════════════════════════════ -->
   <div class="marquee-section" aria-hidden="true">
     <div class="marquee">
       <div class="marquee__track">
-        <!-- Duplicado para loop infinito -->
         <span class="marquee__item">Cabeleireiro<span class="marquee__dot"></span></span>
         <span class="marquee__item">Manicure<span class="marquee__dot"></span></span>
         <span class="marquee__item">Pedicure<span class="marquee__dot"></span></span>
@@ -147,7 +153,6 @@
         <span class="marquee__item">Nail Art<span class="marquee__dot"></span></span>
         <span class="marquee__item">Make para Noivas<span class="marquee__dot"></span></span>
         <span class="marquee__item">Spa dos Pés<span class="marquee__dot"></span></span>
-        <!-- Duplicata -->
         <span class="marquee__item">Cabeleireiro<span class="marquee__dot"></span></span>
         <span class="marquee__item">Manicure<span class="marquee__dot"></span></span>
         <span class="marquee__item">Pedicure<span class="marquee__dot"></span></span>
@@ -163,9 +168,9 @@
   </div>
 
 
-  <!-- ═══════════════════════════════════════
-       SERVICES / SERVIÇOS
-  ════════════════════════════════════════ -->
+  <!-- ══════════════════════════════════════
+       SERVIÇOS
+  ══════════════════════════════════════ -->
   <section class="section services" id="services">
     <div class="container">
 
@@ -175,83 +180,77 @@
         <p class="section-header__description">Do cabelo à maquiagem, cada detalhe é pensado para realçar a sua beleza natural.</p>
       </div>
 
-      <div class="services__grid">
+      <div class="row g-4">
 
-        <!-- Cabeleireiro -->
-        <div class="service-card" data-reveal data-reveal-delay="1">
-          <div class="service-card__icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2a5 5 0 0 1 5 5c0 3-2.5 5.5-5 8.5C9.5 12.5 7 10 7 7a5 5 0 0 1 5-5z"/>
-              <path d="M12 22v-6.5"/>
-              <path d="M9 19l3-2.5 3 2.5"/>
-            </svg>
-          </div>
-          <h3 class="service-card__title">Cabeleireiro</h3>
-          <ul class="service-card__list" aria-label="Serviços de cabeleireiro">
-            <li class="service-card__list-item">Corte feminino e repicado</li>
-            <li class="service-card__list-item">Coloração e retoque de raiz</li>
-            <li class="service-card__list-item">Mechas, ombré e balayage</li>
-            <li class="service-card__list-item">Escova e progressiva</li>
-            <li class="service-card__list-item">Tratamentos e hidratação</li>
-            <li class="service-card__list-item">Penteados para eventos</li>
-          </ul>
-          <div class="service-card__cta">
-            <a href="https://wa.me/5551814870093?text=Ol%C3%A1%2C%20quero%20agendar%20um%20servi%C3%A7o%20de%20cabelo%20na%20Est%C3%A9tica%20Lu!"
-               class="btn btn--outline btn--sm" target="_blank" rel="noopener noreferrer">
-              Agendar
-            </a>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card h-100" data-reveal data-reveal-delay="1">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a5 5 0 0 1 5 5c0 3-2.5 5.5-5 8.5C9.5 12.5 7 10 7 7a5 5 0 0 1 5-5z"/>
+                <path d="M12 22v-6.5"/><path d="M9 19l3-2.5 3 2.5"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Cabeleireiro</h3>
+            <ul class="service-card__list" aria-label="Serviços de cabeleireiro">
+              <li class="service-card__list-item">Corte feminino e repicado</li>
+              <li class="service-card__list-item">Coloração e retoque de raiz</li>
+              <li class="service-card__list-item">Mechas, ombré e balayage</li>
+              <li class="service-card__list-item">Escova e progressiva</li>
+              <li class="service-card__list-item">Tratamentos e hidratação</li>
+              <li class="service-card__list-item">Penteados para eventos</li>
+            </ul>
+            <div class="service-card__cta">
+              <a href="https://wa.me/5551814870093?text=Ol%C3%A1%2C%20quero%20agendar%20um%20servi%C3%A7o%20de%20cabelo%20na%20Est%C3%A9tica%20Lu!"
+                 class="btn btn--outline btn--sm" target="_blank" rel="noopener noreferrer">Agendar</a>
+            </div>
           </div>
         </div>
 
-        <!-- Manicure & Pedicure -->
-        <div class="service-card" data-reveal data-reveal-delay="2">
-          <div class="service-card__icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 11V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v5"/>
-              <path d="M14 10V4"/>
-              <path d="M10 10V4"/>
-              <path d="M6 11h12"/>
-              <rect x="4" y="11" width="16" height="10" rx="2"/>
-            </svg>
-          </div>
-          <h3 class="service-card__title">Manicure <span class="text--italic">&amp; Pedicure</span></h3>
-          <ul class="service-card__list" aria-label="Serviços de manicure e pedicure">
-            <li class="service-card__list-item">Esmaltação simples e em gel</li>
-            <li class="service-card__list-item">Unhas em fibra de vidro</li>
-            <li class="service-card__list-item">Nail art e decorações</li>
-            <li class="service-card__list-item">Pedicure completa</li>
-            <li class="service-card__list-item">Spa dos pés</li>
-            <li class="service-card__list-item">Unhas postiças</li>
-          </ul>
-          <div class="service-card__cta">
-            <a href="https://wa.me/5551814870093?text=Ol%C3%A1%2C%20quero%20agendar%20manicure%20ou%20pedicure%20na%20Est%C3%A9tica%20Lu!"
-               class="btn btn--outline btn--sm" target="_blank" rel="noopener noreferrer">
-              Agendar
-            </a>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card h-100" data-reveal data-reveal-delay="2">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 11V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v5"/>
+                <path d="M14 10V4"/><path d="M10 10V4"/><path d="M6 11h12"/>
+                <rect x="4" y="11" width="16" height="10" rx="2"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Manicure <span class="text--italic">&amp; Pedicure</span></h3>
+            <ul class="service-card__list" aria-label="Serviços de manicure e pedicure">
+              <li class="service-card__list-item">Esmaltação simples e em gel</li>
+              <li class="service-card__list-item">Unhas em fibra de vidro</li>
+              <li class="service-card__list-item">Nail art e decorações</li>
+              <li class="service-card__list-item">Pedicure completa</li>
+              <li class="service-card__list-item">Spa dos pés</li>
+              <li class="service-card__list-item">Unhas postiças</li>
+            </ul>
+            <div class="service-card__cta">
+              <a href="https://wa.me/5551814870093?text=Ol%C3%A1%2C%20quero%20agendar%20manicure%20ou%20pedicure%20na%20Est%C3%A9tica%20Lu!"
+                 class="btn btn--outline btn--sm" target="_blank" rel="noopener noreferrer">Agendar</a>
+            </div>
           </div>
         </div>
 
-        <!-- Depilação & Maquiagem -->
-        <div class="service-card" data-reveal data-reveal-delay="3">
-          <div class="service-card__icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L9.5 8.5H3l5.5 4-2 6.5L12 15l5.5 4-2-6.5L21 8.5h-6.5L12 2z"/>
-            </svg>
-          </div>
-          <h3 class="service-card__title">Depilação <span class="text--italic">&amp; Maquiagem</span></h3>
-          <ul class="service-card__list" aria-label="Serviços de depilação e maquiagem">
-            <li class="service-card__list-item">Depilação com cera (corpo todo)</li>
-            <li class="service-card__list-item">Depilação de sobrancelha</li>
-            <li class="service-card__list-item">Maquiagem social e festa</li>
-            <li class="service-card__list-item">Make para eventos e formaturas</li>
-            <li class="service-card__list-item">Maquiagem de noiva</li>
-            <li class="service-card__list-item">Make para debutantes</li>
-          </ul>
-          <div class="service-card__cta">
-            <a href="https://wa.me/5551814870093?text=Ol%C3%A1%2C%20quero%20agendar%20depila%C3%A7%C3%A3o%20ou%20maquiagem%20na%20Est%C3%A9tica%20Lu!"
-               class="btn btn--outline btn--sm" target="_blank" rel="noopener noreferrer">
-              Agendar
-            </a>
+        <div class="col-lg-4 col-md-6 mx-md-auto">
+          <div class="service-card h-100" data-reveal data-reveal-delay="3">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L9.5 8.5H3l5.5 4-2 6.5L12 15l5.5 4-2-6.5L21 8.5h-6.5L12 2z"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Depilação <span class="text--italic">&amp; Maquiagem</span></h3>
+            <ul class="service-card__list" aria-label="Serviços de depilação e maquiagem">
+              <li class="service-card__list-item">Depilação com cera (corpo todo)</li>
+              <li class="service-card__list-item">Depilação de sobrancelha</li>
+              <li class="service-card__list-item">Maquiagem social e festa</li>
+              <li class="service-card__list-item">Make para eventos e formaturas</li>
+              <li class="service-card__list-item">Maquiagem de noiva</li>
+              <li class="service-card__list-item">Make para debutantes</li>
+            </ul>
+            <div class="service-card__cta">
+              <a href="https://wa.me/5551814870093?text=Ol%C3%A1%2C%20quero%20agendar%20depila%C3%A7%C3%A3o%20ou%20maquiagem%20na%20Est%C3%A9tica%20Lu!"
+                 class="btn btn--outline btn--sm" target="_blank" rel="noopener noreferrer">Agendar</a>
+            </div>
           </div>
         </div>
 
@@ -260,9 +259,9 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════
-       COMO FUNCIONA — 3 passos
-  ════════════════════════════════════════ -->
+  <!-- ══════════════════════════════════════
+       COMO FUNCIONA
+  ══════════════════════════════════════ -->
   <section class="section steps" id="how-it-works">
     <div class="container">
 
@@ -272,34 +271,37 @@
         <p class="section-header__description">Em três passos você garante seu horário e deixa o resto por nossa conta.</p>
       </div>
 
-      <div class="steps__grid" data-reveal>
-
-        <div class="step-card">
-          <div class="step-card__number" aria-hidden="true">1</div>
-          <h3 class="step-card__title">Escolha o serviço</h3>
-          <p class="step-card__description">Navegue pelos nossos serviços e decida o que você quer transformar hoje.</p>
+      <div class="row g-4 justify-content-center" data-reveal>
+        <div class="col-lg-4 col-md-6">
+          <div class="step-card text-center">
+            <div class="step-card__number mx-auto" aria-hidden="true">1</div>
+            <h3 class="step-card__title">Escolha o serviço</h3>
+            <p class="step-card__description">Navegue pelos nossos serviços e decida o que você quer transformar hoje.</p>
+          </div>
         </div>
-
-        <div class="step-card">
-          <div class="step-card__number" aria-hidden="true">2</div>
-          <h3 class="step-card__title">Agende pelo WhatsApp</h3>
-          <p class="step-card__description">Fale com a gente, escolha o horário que mais te convém e confirme sua visita.</p>
+        <div class="col-lg-4 col-md-6">
+          <div class="step-card text-center">
+            <div class="step-card__number mx-auto" aria-hidden="true">2</div>
+            <h3 class="step-card__title">Agende pelo WhatsApp</h3>
+            <p class="step-card__description">Fale com a gente, escolha o horário que mais te convém e confirme sua visita.</p>
+          </div>
         </div>
-
-        <div class="step-card">
-          <div class="step-card__number" aria-hidden="true">3</div>
-          <h3 class="step-card__title">Venha e relaxe</h3>
-          <p class="step-card__description">Chegue, se acomode e deixe que nossas profissionais cuidade de você com carinho.</p>
+        <div class="col-lg-4 col-md-6">
+          <div class="step-card text-center">
+            <div class="step-card__number mx-auto" aria-hidden="true">3</div>
+            <h3 class="step-card__title">Venha e relaxe</h3>
+            <p class="step-card__description">Chegue, se acomode e deixe que nossas profissionais cuidade de você com carinho.</p>
+          </div>
         </div>
-
       </div>
+
     </div>
   </section>
 
 
-  <!-- ═══════════════════════════════════════
-       GALLERY / RESULTADOS
-  ════════════════════════════════════════ -->
+  <!-- ══════════════════════════════════════
+       GALERIA
+  ══════════════════════════════════════ -->
   <section class="section gallery" id="gallery">
     <div class="container">
 
@@ -336,9 +338,9 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════
-       TESTIMONIALS / DEPOIMENTOS
-  ════════════════════════════════════════ -->
+  <!-- ══════════════════════════════════════
+       DEPOIMENTOS
+  ══════════════════════════════════════ -->
   <section class="section testimonials" id="testimonials">
     <div class="container">
 
@@ -347,46 +349,52 @@
         <h2 class="section-header__title">Clientes que <span class="text--accent text--italic">amamos atender</span></h2>
       </div>
 
-      <div class="testimonials__grid">
+      <div class="row g-4">
 
-        <div class="testimonial-card" data-reveal data-reveal-delay="1">
-          <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
-          <p class="testimonial-card__text">
-            "Fiz meu dia de noiva no Bella Studio e foi perfeito! A equipe me deixou linda e confortável durante todo o processo. A maquiagem durou o dia inteiro. Amei cada detalhe, super recomendo!"
-          </p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar" aria-hidden="true">C</div>
-            <div>
-              <p class="testimonial-card__name">Camila Ferreira</p>
-              <p class="testimonial-card__detail">Noiva — cliente há 3 anos</p>
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card h-100" data-reveal data-reveal-delay="1">
+            <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+            <p class="testimonial-card__text">
+              "Fiz meu dia de noiva no Bella Studio e foi perfeito! A equipe me deixou linda e confortável durante todo o processo. A maquiagem durou o dia inteiro. Amei cada detalhe, super recomendo!"
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">C</div>
+              <div>
+                <p class="testimonial-card__name">Camila Ferreira</p>
+                <p class="testimonial-card__detail">Noiva — cliente há 3 anos</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="testimonial-card" data-reveal data-reveal-delay="2">
-          <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
-          <p class="testimonial-card__text">
-            "Vim para fazer o design de sobrancelha e saí também com o cabelo novo! As meninas são incríveis, super atenciosas e o resultado sempre supera as expectativas. Já sou cliente fixa!"
-          </p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar" aria-hidden="true">J</div>
-            <div>
-              <p class="testimonial-card__name">Juliana Mendes</p>
-              <p class="testimonial-card__detail">Cliente há 1 ano e meio</p>
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card h-100" data-reveal data-reveal-delay="2">
+            <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+            <p class="testimonial-card__text">
+              "Vim para fazer o design de sobrancelha e saí também com o cabelo novo! As meninas são incríveis, super atenciosas e o resultado sempre supera as expectativas. Já sou cliente fixa!"
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">J</div>
+              <div>
+                <p class="testimonial-card__name">Juliana Mendes</p>
+                <p class="testimonial-card__detail">Cliente há 1 ano e meio</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="testimonial-card" data-reveal data-reveal-delay="3">
-          <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
-          <p class="testimonial-card__text">
-            "Tinha muito medo de fazer mechas pela primeira vez, mas a profissional foi tão paciente e cuidadosa que me deixou totalmente à vontade. Ficou lindo! Vim para a minha filha e me rendi também."
-          </p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar" aria-hidden="true">P</div>
-            <div>
-              <p class="testimonial-card__name">Patrícia Alves</p>
-              <p class="testimonial-card__detail">Cliente há 8 meses</p>
+        <div class="col-lg-4 col-md-6 mx-md-auto">
+          <div class="testimonial-card h-100" data-reveal data-reveal-delay="3">
+            <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+            <p class="testimonial-card__text">
+              "Tinha muito medo de fazer mechas pela primeira vez, mas a profissional foi tão paciente e cuidadosa que me deixou totalmente à vontade. Ficou lindo! Vim para a minha filha e me rendi também."
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">P</div>
+              <div>
+                <p class="testimonial-card__name">Patrícia Alves</p>
+                <p class="testimonial-card__detail">Cliente há 8 meses</p>
+              </div>
             </div>
           </div>
         </div>
@@ -396,9 +404,9 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════
+  <!-- ══════════════════════════════════════
        FAQ
-  ════════════════════════════════════════ -->
+  ══════════════════════════════════════ -->
   <section class="section faq" id="faq">
     <div class="container">
 
@@ -407,10 +415,10 @@
         <h2 class="section-header__title">Perguntas <span class="text--accent text--italic">&amp; Respostas</span></h2>
       </div>
 
-      <div class="faq__list" data-reveal>
+      <div class="faq__list mx-auto" data-reveal>
 
         <div class="faq-item">
-          <button class="faq-item__question" aria-expanded="false">
+          <button type="button" class="faq-item__question" aria-expanded="false">
             <span>Como faço para agendar um horário?</span>
             <svg class="faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -420,7 +428,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-item__question" aria-expanded="false">
+          <button type="button" class="faq-item__question" aria-expanded="false">
             <span>Preciso dar entrada para reservar o horário?</span>
             <svg class="faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -430,7 +438,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-item__question" aria-expanded="false">
+          <button type="button" class="faq-item__question" aria-expanded="false">
             <span>Quais formas de pagamento vocês aceitam?</span>
             <svg class="faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -440,7 +448,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-item__question" aria-expanded="false">
+          <button type="button" class="faq-item__question" aria-expanded="false">
             <span>Vocês fazem pacotes para noivas?</span>
             <svg class="faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -450,7 +458,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-item__question" aria-expanded="false">
+          <button type="button" class="faq-item__question" aria-expanded="false">
             <span>Qual o horário de funcionamento?</span>
             <svg class="faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -460,7 +468,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-item__question" aria-expanded="false">
+          <button type="button" class="faq-item__question" aria-expanded="false">
             <span>Preciso levar alguma referência para o atendimento?</span>
             <svg class="faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -474,16 +482,15 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════
-       CTA / CONTATO
-  ════════════════════════════════════════ -->
+  <!-- ══════════════════════════════════════
+       CTA
+  ══════════════════════════════════════ -->
   <section class="cta-section" id="contact">
     <div class="container">
-      <div class="cta-section__content" data-reveal>
+      <div class="cta-section__content text-center mx-auto" data-reveal>
         <p class="cta-section__eyebrow">Pronta para se cuidar?</p>
         <h2 class="cta-section__title">
-          Agende agora e venha<br>
-          viver essa experiência.
+          Agende agora e venha<br>viver essa experiência.
         </h2>
         <p class="cta-section__description">
           Nossa equipe está pronta para te atender com carinho e dedicação.
@@ -501,14 +508,15 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════
+  <!-- ══════════════════════════════════════
        FOOTER
-  ════════════════════════════════════════ -->
+  ══════════════════════════════════════ -->
   <footer class="footer" id="footer">
     <div class="container">
 
-      <div class="footer__top">
-        <div class="footer__brand">
+      <div class="row g-4 pb-4 mb-4 footer__top-row">
+
+        <div class="col-lg-5 col-md-6">
           <a href="#" class="logo" aria-label="Estética Lu">
             <span class="logo__mark" aria-hidden="true">Lu</span>
             <div class="logo__text">
@@ -516,8 +524,8 @@
               <span class="logo__subtitle">Salão de Beleza</span>
             </div>
           </a>
-          <p class="footer__tagline">"Cada mulher é única.<br>Nossa missão é fazer você brilhar."</p>
-          <div class="footer__social">
+          <p class="footer__tagline mt-3">"Cada mulher é única.<br>Nossa missão é fazer você brilhar."</p>
+          <div class="d-flex gap-2 mt-4">
             <a href="#" class="footer__social-link" aria-label="Instagram" rel="noopener">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             </a>
@@ -530,30 +538,33 @@
           </div>
         </div>
 
-        <nav class="footer__nav" aria-label="Links do rodapé">
-          <div class="footer__nav-group">
-            <h3 class="footer__nav-title">Serviços</h3>
-            <a href="#services" class="footer__nav-link">Cabelo</a>
-            <a href="#services" class="footer__nav-link">Estética</a>
-            <a href="#services" class="footer__nav-link">Maquiagem</a>
-            <a href="#services" class="footer__nav-link">Noivas</a>
-          </div>
-          <div class="footer__nav-group">
-            <h3 class="footer__nav-title">Salão</h3>
-            <a href="#gallery"       class="footer__nav-link">Galeria</a>
-            <a href="#testimonials"  class="footer__nav-link">Depoimentos</a>
-            <a href="#faq"           class="footer__nav-link">FAQ</a>
-          </div>
-          <div class="footer__nav-group">
-            <h3 class="footer__nav-title">Contato</h3>
-            <p class="footer__contact-item">📍 Av. Venâncio Aires, 490</p>
-            <p class="footer__contact-item">📞 (51) 3221.5568<br>&nbsp;&nbsp;&nbsp;&nbsp; (51) 8148.7093</p>
-            <p class="footer__contact-item">🕐 Ter–Sex: 9h–19h<br>&nbsp;&nbsp;&nbsp;&nbsp; Sáb: 9h–17h</p>
-          </div>
-        </nav>
+        <div class="col-lg-7 col-md-6">
+          <nav class="d-flex flex-wrap gap-4 gap-lg-5" aria-label="Links do rodapé">
+            <div class="footer__nav-group">
+              <h3 class="footer__nav-title">Serviços</h3>
+              <a href="#services" class="footer__nav-link d-block">Cabelo</a>
+              <a href="#services" class="footer__nav-link d-block">Estética</a>
+              <a href="#services" class="footer__nav-link d-block">Maquiagem</a>
+              <a href="#services" class="footer__nav-link d-block">Noivas</a>
+            </div>
+            <div class="footer__nav-group">
+              <h3 class="footer__nav-title">Salão</h3>
+              <a href="#gallery"      class="footer__nav-link d-block">Galeria</a>
+              <a href="#testimonials" class="footer__nav-link d-block">Depoimentos</a>
+              <a href="#faq"          class="footer__nav-link d-block">FAQ</a>
+            </div>
+            <div class="footer__nav-group">
+              <h3 class="footer__nav-title">Contato</h3>
+              <p class="footer__contact-item">📍 Av. Venâncio Aires, 490</p>
+              <p class="footer__contact-item">📞 (51) 3221.5568<br>&nbsp;&nbsp;&nbsp;&nbsp; (51) 8148.7093</p>
+              <p class="footer__contact-item">🕐 Ter–Sex: 9h–19h<br>&nbsp;&nbsp;&nbsp;&nbsp; Sáb: 9h–17h</p>
+            </div>
+          </nav>
+        </div>
+
       </div>
 
-      <div class="footer__bottom">
+      <div class="d-flex justify-content-between flex-wrap gap-2 footer__bottom">
         <p>© 2025 Estética Lu. Todos os direitos reservados.</p>
         <p>Feito com carinho.</p>
       </div>
@@ -562,9 +573,9 @@
   </footer>
 
 
-  <!-- ═══════════════════════════════════════
-       FLOATING WHATSAPP
-  ════════════════════════════════════════ -->
+  <!-- ══════════════════════════════════════
+       WHATSAPP FLUTUANTE
+  ══════════════════════════════════════ -->
   <a href="https://wa.me/5551814870093?text=Ol%C3%A1%2C%20quero%20agendar%20um%20hor%C3%A1rio%20no%20Bella%20Studio!"
      class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Agendar pelo WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -572,6 +583,8 @@
     </svg>
   </a>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
