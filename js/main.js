@@ -1,13 +1,19 @@
 /* ════════════════════════════════════════
-   HEADER — scroll state
+   HEADER — scroll state + altura dinâmica
 ════════════════════════════════════════ */
 const header = document.getElementById('header');
 
+const updateHeaderHeight = () => {
+  document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
+};
+
 const handleScroll = () => {
   header.classList.toggle('is-scrolled', window.scrollY > 24);
+  updateHeaderHeight();
 };
 
 window.addEventListener('scroll', handleScroll, { passive: true });
+window.addEventListener('resize', updateHeaderHeight, { passive: true });
 handleScroll();
 
 /* ════════════════════════════════════════
