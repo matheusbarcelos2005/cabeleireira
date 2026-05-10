@@ -142,7 +142,7 @@
    HERO
 ════════════════════════════════════════ */
 .hero {
-  min-height: 100svh;
+  min-height: 85svh;
   display: flex;
   align-items: center;
   padding-top: 5.5rem;
@@ -241,7 +241,9 @@
 }
 
 /* ─── Visual (foto + badge) ─── */
-.hero__visual { position: relative; }
+.hero__visual { 
+  display: none;
+}
 
 .hero__photo {
   width: 100%;
