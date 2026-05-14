@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"a:\\\\_SITES\\\\SITES PRONTOS\\\\cabeleireira\" -Recurse -File)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(grep -E \"\\\\.\\(png|jpg|jpeg|gif|svg|webp|ico\\)$\")"
+    ]
+  }
+}

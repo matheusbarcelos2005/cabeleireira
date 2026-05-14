@@ -1,4 +1,4 @@
-# Correções Aplicadas ao Site - Estética Lu
+# Correções Aplicadas ao Site - Studio Vera
 
 ## Problemas Identificados e Corrigidos ✅
 
